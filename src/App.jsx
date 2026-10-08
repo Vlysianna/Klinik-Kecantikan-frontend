@@ -12,10 +12,8 @@ export default function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          {/* Public Authentication Route */}
           <Route path="/login" element={<LoginPage />} />
 
-          {/* Protected Application Routes */}
           <Route
             path="/"
             element={
@@ -30,7 +28,6 @@ export default function App() {
             <Route path="reports" element={<ReportsPage />} />
           </Route>
 
-          {/* Fallback */}
           <Route path="*" element={<Navigate to="/pos" replace />} />
         </Routes>
       </AuthProvider>
